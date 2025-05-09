@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Word Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Guess the Word Game</h1>
+
+  <div id="setup">
+    <label>
+      Game Mode:
+      <select id="gameMode">
+        <option value="1">Single Player</option>
+        <option value="2">Two Players</option>
+      </select>
+    </label>
+    <div id="playerNames" style="display:none;">
+      <input type="text" id="player1" placeholder="Player 1 Name">
+      <input type="text" id="player2" placeholder="Player 2 Name">
+    </div>
+    <label>
+      Max Points:
+      <select id="maxPoints">
+        <option value="3">3</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+    <button id="startGame">Start Game</button>
+  </div>
+
+  <div id="gameArea" style="display:none;">
+    <div id="status"></div>
+
+    <div id="wordInputArea" style="display:none;">
+      <p>Enter word (max 45 chars):</p>
+      <input type="text" id="wordInput" maxlength="45">
+      <button id="goBtn">GO</button>
+      <p id="inputTimer"></p>
+    </div>
+
+    <div id="guessArea" style="display:none;">
+      <div id="letterPool"></div>
+      <div id="guessSlots"></div>
+      <button id="submitDragGuess">Submit Guess</button>
+      <button id="giveUpBtn">Give Up</button>
+      <button id="skipGuess">Skip</button>
+      <p id="guessTimer"></p>
+    </div>
+
+    <div id="scoreBoard"></div>
+  </div>
+
+  <h2>Game Records</h2>
+  <ul id="recordList"></ul>
+
+
+  <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>

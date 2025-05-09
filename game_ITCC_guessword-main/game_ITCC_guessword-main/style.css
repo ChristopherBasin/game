@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Barriecito', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe29f, #ffa99f);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  #setup, #gameArea {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #6a82fb;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  button:hover {
+    transform: scale(1.05);
+    background-color: #5a72eb;
+  }
+  
+  #scoreBoard {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .draggable-letter {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #fff;
+    border: 2px solid #6a82fb;
+    border-radius: 6px;
+    cursor: move;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+    animation: fadeIn 0.3s;
+  }
+  .draggable-letter:hover {
+    transform: scale(1.1);
+    background-color: #d0d8ff;
+  }
+  
+  .letter-slot {
+    display: inline-block;
+    border-bottom: 3px solid #444;
+    width: 40px;
+    height: 50px;
+    margin: 5px;
+    font-size: 1.5rem;
+    vertical-align: bottom;
+    text-align: center;
+    color: #222;
+    animation: fadeIn 0.4s;
+  }
+  
+  #letterPool {
+    margin: 20px 0;
+  }
+  
+  #recordList {
+    text-align: left;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0;
+  }
+  #recordList li {
+    list-style: none;
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    animation: fadeIn 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
